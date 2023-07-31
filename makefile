@@ -1,16 +1,8 @@
-PHONY: dind-ci bulid deploy
+PHONY: up
 
 # run dind-ci
-dind-ci:
+up:
 	@echo ---
 	@echo ${OPENAI_API_KEY}
 	@echo ---
 	./bin/dind-ci.sh ${OPENAI_API_KEY}
-	
-# build image
-build:
-	docker build -t fastapi app/
-
-# test and deploy
-deploy:
-	./bin/deploy.sh ${OPENAI_API_KEY}

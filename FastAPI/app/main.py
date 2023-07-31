@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-import ai
+from . import ai
 import random
 import string
 
@@ -17,13 +17,3 @@ async def root():
 async def generate_html(topic):
     html_content = ai.generate_html(topic)
     return HTMLResponse(content=html_content, status_code=200)
-
-# To run this application, you would typically use the command `uvicorn main:app --reload`
-# from the command line, where "main" is the name of this Python file (main.py) and "app"
-# is the name of the FastAPI instance.
-
-# Note: This command cannot be run in this environment as it would start a web server
-# that listens for incoming requests, which this environment doesn't support.
-
-# However, you can take this code and run it in your local environment. Once the server is
-# running, you can visit `http://localhost:8000` to see the output.
