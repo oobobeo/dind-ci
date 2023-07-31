@@ -4,8 +4,10 @@ REPO = gkstmdok
 
 # build app
 build:
+	@echo "building..."
 	docker build -t ${REPO}:fastapi .
 
 # test and deploy app
 deploy:
-	bin/deploy.sh ${OPENAI_API_KEY} ${REPO}
+	@echo "deploying..."
+	@bin/deploy.sh ${OPENAI_API_KEY} ${REPO}

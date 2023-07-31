@@ -3,7 +3,6 @@
 set -e
 
 OPENAI_API_KEY=${1}
-echo $OPENAI_API_KEY
 
 if [ -z "${OPENAI_API_KEY}" ]; then
     echo "OPENAI_API_KEY is not set"

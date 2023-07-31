@@ -2,9 +2,6 @@ import openai
 import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-print("---------------")
-print(openai.api_key)
-print("---------------")
 
 def generate_html(topic, model="gpt-3.5-turbo"):
     prompt = f"sample html page about {topic}. do not include img tags"

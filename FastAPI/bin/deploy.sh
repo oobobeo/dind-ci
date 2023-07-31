@@ -5,10 +5,6 @@ set -e
 OPENAI_API_KEY=${1}
 REPO=${2}
 
-echo =============
-echo $OPENAI_API_KEY
-echo =============
-
 ctnid=$(docker container ls | grep fastapi-deploy | cut -d' ' -f1)
 if [[ $ctnid ]]; then
     docker container rm -f $ctnid
