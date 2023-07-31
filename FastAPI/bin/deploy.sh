@@ -16,7 +16,7 @@ fi
 
 # run tests
 docker run -it --rm -d -p 8888:8888 --name fastapi-test -e OPENAI_API_KEY=${OPENAI_API_KEY} ${REPO}:fastapi
-../bin/test.sh
+bin/test.sh
 if [[ $? -ne 0 ]]; then
     @echo "Tests failed"
     exit 1;

@@ -8,4 +8,4 @@ build:
 
 # test and deploy app
 deploy:
-	../bin/deploy.sh ${OPENAI_API_KEY} ${REPO}
+	bin/deploy.sh ${OPENAI_API_KEY} ${REPO}
